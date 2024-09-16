@@ -11,7 +11,7 @@ namespace SeleniumSpecFlowProject.Utility
 {
     public  class Base
     {
-
+        
         public static JsonReader getDataParser()
         {
             return new JsonReader();
