@@ -27,7 +27,7 @@ namespace SeleniumSpecFlowProject.Pages
         private By CheckoutBtn = By.XPath("//button[@class='btn btn-success']");
         private By CountryOptionsTxtBox = By.Id("country");
         private By CountryItem = By.XPath("//div[@class='suggestions']//ul//li//a");
-        private By TermsConditionChkBox = By.XPath("//input[@type=\"checkbox\"]");
+        private By TermsConditionChkBox = By.XPath("//input[@type='checkbox']");
         private By PurchaseBtn = By.XPath("//input[@value='Purchase']");
         private By SucessAlert = By.XPath("//div[starts-with(@class,'alert')]");
 
@@ -51,7 +51,7 @@ namespace SeleniumSpecFlowProject.Pages
             driver.FindElement(CountryItem).Click();
 
             IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
-            js.ExecuteScript("arguments[0].click();", TermsConditionChkBox);
+            js.ExecuteScript("arguments[0].click();", driver.FindElement(TermsConditionChkBox));
 
             driver.FindElement(PurchaseBtn).Click();
 
